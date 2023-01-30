@@ -1,0 +1,90 @@
+-> use cookie for saving authentication details and use cookie perser for parsing cookie with cookie secret.
+-> For user registration use gravatar first and inside updating profile I will use image uploader
+-> Display date and time using moment 
+-> Show some default error handler from sumit saha project.
+-> Will use tailwind for front end UI.
+-> Will use gravator for grabbing random image if there is no profile picture from fronend React App.
+
+Features
+---------
+- There will be two user role: admin, consumer
+- Consumer can see each other public profiles and send them contact request.
+- If requested consumer accepts the request then they will be friends and they will be able to send message each other.
+- Consumer will be able to block other consumer so he can hide himself
+- There will be video, audio call with screen sharing support and text messages.
+- Letter I will add support for emoji.
+- Will use daisyui for front end.
+https://daisyui.com/docs/install/
+
+
+
+schemas
+user
+-----------
+Username
+email
+mobile
+password
+role
+created_at
+updated_at
+
+profile
+----------
+user_id
+address
+social_profiles: [
+    facebook: {}
+    linkedin: {}
+    instagram: {}
+    github: {}
+]
+education: [
+    [
+        institute: 
+        degree:
+        subject:
+        passing_year:
+    ]
+],
+friends_list: [
+    {
+        profile,
+        status: [active or pending]
+    }
+],
+active_conversations: [
+    {
+        conversation
+    }
+]
+block_list: [
+    profile
+]
+created_at
+updated_at
+etc will come soon
+
+
+conversation
+-------------
+creator: { profile }
+type: [message or chat-room]
+participents: [
+    {
+        profile,
+    }
+],
+messages: [
+    {
+        body: ,
+        sender: 
+        attachments (Max 2 | only image, docs and pdf are allowed): 
+        created_at
+        updated_at
+    }
+]
+created_at
+updated_at
+
+
